@@ -9,7 +9,7 @@ echo 2. installing rvm
 curl -sSL https://get.rvm.io | bash -s stable
 
 echo 3. loading RVM script and installing dependencies
-source /usr/local/scripts/rvm
+source /usr/local/rvm/scripts/rvm
 rvm requirements
 
 echo 4. Installing Ruby version 2.4.1
