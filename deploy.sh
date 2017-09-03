@@ -1,12 +1,12 @@
 #!/bin/sh
 
-echo Деплой приложения
+echo Part 3 - deploy app
 
-# 1. Копируем код приложения
+echo 1. copy app
 git clone https://github.com/Artemmkin/reddit.git
 
-# 2. Переходим в директорию проекта и устанавливаем зависимости приложения
+echo 2. installing app
 cd reddit && bundle install
 
-# 3. Запускаем сервер приложения в папке проект:
+echo 3. launch app server
 puma -d
