@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo Part 2 - Installing MongoDB
 
