@@ -13,11 +13,11 @@
 			"zone": "europe-west1-b",
 			"ssh_username": "appuser",
 			"machine_type": "{{user `machine_type`}}",
-			"image_description": "base image for reddit app",
+			"image_description": "Image for reddit app based on {{user `source_image`}} with Ruby 2.4.1 and MongoDB 3.2",
 			"disk_type": "pd-standard",
 			"disk_size": "10",
 			"network": "default",
-			"tags": ["puma-server"]
+			"tags": ["reddit-app"]
 		}
 	],
 	"provisioners": [
