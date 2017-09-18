@@ -33,3 +33,18 @@ variable zone {
   description = "Zone"
   default     = "europe-west1-b"
 }
+
+variable machine_type {
+  description = "Type of machine"
+  default     = "g1-small"
+}
+
+variable app_source_ranges {
+  description = "Source ranges for accessing app"
+  default     = ["0.0.0.0/0"]
+}
+
+variable ssh_source_ranges {
+  description = "Source ranges for SSH"
+  default     = ["0.0.0.0/0"]
+}
