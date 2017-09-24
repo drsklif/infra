@@ -1,0 +1,2 @@
+GCE_PARAMS = ('infra-svc@infra-179714.iam.gserviceaccount.com', '/run/media/sklif/DATA/Learning/devops/infra-f059e0377f1e.json')
+GCE_KEYWORD_PARAMS = {'project': 'infra-179714', 'datacenter': 'europe-west1'}
