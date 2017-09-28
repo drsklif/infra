@@ -24,3 +24,6 @@ GCE_KEYWORD_PARAMS = {'project': 'yourproject', 'datacenter': 'choice any zone'}
   * Applying db instance tasks `ansible-playbook reddit_app.yml --limit reddit-db --tags db-tag`
   * Checking app deploy instance tasks `ansible-playbook reddit_app.yml --check --limit reddit-app --tags deploy-tag`
   * Applying app deploy instance tasks `ansible-playbook reddit_app.yml --limit reddit-app --tags deploy-tag`
+
+**Task 12**
+jdauphant.nginx role used to install and configure nginx on app server. Reddit app is accessible on port 80
