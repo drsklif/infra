@@ -29,7 +29,6 @@
     state: link
     src: "{{ nginx_conf_dir }}/sites-available/{{ item.key }}.conf"
     dest: "{{ nginx_conf_dir }}/sites-enabled/{{ item.key }}.conf"
-    force: yes
   with_dict: "{{ nginx_sites }}"
   when: item.key not in nginx_remove_sites
   notify:

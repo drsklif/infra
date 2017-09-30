@@ -12,10 +12,10 @@ keep_only_specified: False
 nginx_installation_type: "packages"
 nginx_binary_name: "nginx"
 nginx_service_name: "{{nginx_binary_name}}"
-nginx_conf_dir: "{% if ansible_os_family == 'FreeBSD' %}/usr/local/etc/nginx{% else %}/etc/nginx{% endif %}"
+nginx_conf_dir: /etc/nginx # For this variable, a specific value for the OS can be apply in vars/{{ ansible_os_family }}.yml 
 nginx_default_site_template: "site.conf.j2"
 
-nginx_user: "{% if ansible_os_family == 'RedHat' or ansible_os_family == 'Suse' %}nginx{% elif ansible_os_family == 'Debian' %}www-data{% elif ansible_os_family == 'FreeBSD' %}www{% endif %}"
+nginx_user: nginx  # For this variable, a specific value for the OS can be apply in vars/{{ ansible_os_family }}.
 nginx_group: "{{nginx_user}}"
 
 nginx_pid_file: '/var/run/{{nginx_service_name}}.pid'
@@ -35,18 +35,17 @@ nginx_http_params: "{{ nginx_http_default_params }}"
 
 nginx_stream_params: []
 
-nginx_sites:
-  reddit:
-    - listen 80
-    - server_name ""
-    - location / {
-        proxy_pass http://127.0.0.1:9292;
-      }
+nginx_sites_default_root: /usr/share/nginx/html # For this variable, a specific value for the OS can be apply in vars/{{ ansible_os_family }}.
 
+nginx_sites:
+  default:
+    - listen 80 default_server
+    - server_name _
+    - root "{{ nginx_sites_default_root }}" 
+    - index index.html
 nginx_remove_sites: []
 
 nginx_configs: {}
-
 nginx_snippets: {}
 nginx_stream_configs: {}
 nginx_remove_configs: []
