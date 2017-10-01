@@ -32,3 +32,8 @@ jdauphant.nginx role used to install and configure nginx on app server. Reddit a
 *Working with instances:*
   * Checking all instance tasks `ansible-playbook site.yml --check`
   * Applying all instance tasks `ansible-playbook site.yml`
+
+**Task 13**
+  * vagrant and molecule roole installed
+  * test for checking mongodb port using added
+  * packer configured for deploying with ansible roles
