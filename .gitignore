@@ -5,3 +5,7 @@
 .terraform/
 *.retry
 *.pyc
+
+# Vagrant
+.vagrant/
+*.logs
