@@ -1,2 +1,3 @@
 ---
+- src: https://github.com/drsklif/ansible-role-mongo
 - src: jdauphant.nginx
