@@ -5,3 +5,12 @@
 .terraform/
 *.retry
 *.pyc
+
+# Vagrant
+.vagrant/
+*.logs
+*.log
+env/
+
+ansible/roles/*
+!ansible/roles/app
